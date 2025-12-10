@@ -4,7 +4,7 @@ from datetime import datetime
 from openai import OpenAI
 
 # OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI()
 
 app = Flask(__name__)
 
@@ -288,3 +288,4 @@ If information is missing, use empty strings.
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
